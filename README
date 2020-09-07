@@ -1,0 +1,15 @@
+To create the initial database, just import the db object from an interactive Python shell and rin following commands:
+
+>> from app import db
+>> db.create_all()
+>> db.session.commit() 
+>> exit()
+
+Start Redis Server
+>> redis-server
+
+In other Terminal run worker and flask app:
+>> python worker.py
+>> python app.py
+
+
