@@ -91,7 +91,7 @@ def get_results(job_key):
         if "result" in result.keys():
             return render_template("home.html", result=result['result'])
         else:
-            return render_template("home.html", error=result["error"]), status.HTTP_500_INTERNAL_SERVER_ERROR
+            return render_template("home.html",result = {}, error=result["error"]), status.HTTP_500_INTERNAL_SERVER_ERROR
     else:
         raise Exception("202")
    
